@@ -845,3 +845,109 @@ i {
 
 .logoatas img {
     width: 50%
+
+}
+
+
+/* FORCE stylish sidebar (paste at END) */
+
+.slot-sidebar.res-bar,
+.slot .slot-sidebar {
+  background: rgba(0,0,0,0.35) !important;
+  border: 1px solid rgba(4,145,1,0.35) !important;
+  border-radius: 18px !important;
+  padding: 12px 10px !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35), inset 0 0 18px rgba(4,145,1,0.12) !important;
+}
+
+.sidebar-right {
+  background: rgba(12,12,12,0.72) !important;
+  border: 1px solid rgba(4,145,1,0.35) !important;
+  border-bottom: 4px solid #049101 !important;
+  border-radius: 16px !important;
+  padding: 14px 10px !important;
+}
+
+.sidebar-right img {
+  width: 62% !important;
+  max-width: 170px !important;
+  display: block !important;
+  margin: 8px auto 10px !important;
+}
+
+.sidebar-right .spinner {
+  position: static !important;
+  margin: 10px auto 8px !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  border: 3px solid rgba(4,145,1,0.22) !important;
+  border-top-color: #24d503 !important;
+  animation: spin 0.9s linear infinite !important;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.slot-sidebar-nav {
+  margin-top: 10px !important;
+  border-radius: 14px !important;
+  background: rgba(0,0,0,0.25) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: calc(100vh - 240px) !important;
+}
+
+.slot-sidebar-nav > li {
+  border-bottom: 1px solid rgba(255,136,0,0.25) !important;
+}
+
+.slot-sidebar-nav > li > a.btn-provider {
+  margin: 8px !important;
+  border-radius: 12px !important;
+  padding: 12px 12px !important;
+  background: linear-gradient(135deg, rgba(4,145,1,0.10), rgba(0,0,0,0.35)) !important;
+  border: 1px solid rgba(4,145,1,0.22) !important;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+}
+
+.slot-sidebar-nav > li > a.btn-provider:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.35), 0 0 14px rgba(36,213,3,0.25) !important;
+  border-color: rgba(36,213,3,0.65) !important;
+}
+
+.slot-sidebar-nav > li.active > a,
+.slot-sidebar-nav > li > a.active {
+  background: linear-gradient(135deg, rgba(36,213,3,0.25), rgba(0,0,0,0.35)) !important;
+  border-color: rgba(36,213,3,0.85) !important;
+  box-shadow: 0 0 18px rgba(36,213,3,0.30) !important;
+}
+
+.btn-provider h2 { color: #eaffef !important; font-weight: 700 !important; }
+
+/* Fix your buggy selector effect (so not ALL i tags change) */
+li.active a, li.active i { color: #fff !important; }
+
+
+
+/* ===== REMOVE SIDEBAR SCROLLBAR ===== */
+
+.slot-sidebar-nav {
+  overflow: hidden !important;
+  max-height: none !important;
+}
+
+/* Mobile keeps your horizontal style */
+@media (max-width: 992px) {
+  .slot-sidebar-nav {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+}
+
+
+
+
+
